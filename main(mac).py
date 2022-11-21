@@ -4,7 +4,8 @@ from sapling import SaplingClient
 from gtts import gTTS
 from io import BytesIO
 from pygame import mixer
-
+from time import sleep
+import playsound
 
 api_key ='KQ5SY11V64H8MI36ZSMKKP6DQHV6F96F'
 client = SaplingClient(api_key=api_key)
@@ -39,6 +40,7 @@ with sr.Microphone() as source:
     tts.save("tts.mp3")
     mixer.music.load("tts.mp3")
     mixer.music.play()
-            
+    while mixer.music.get_busy():
+        sleep(1)       
     
     
