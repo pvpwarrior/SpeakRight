@@ -1,4 +1,4 @@
-# SpeakRight
+# Anvaya
 
 ## About
 This python takes voice input and plays audio with grammar corrections.
